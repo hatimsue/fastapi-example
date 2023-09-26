@@ -43,6 +43,6 @@ jobs:
         args:
           -Dsonar.projectKey=hatimsue_fastapi
           -Dsonar.organization=hatimsue
-          -Dsonar.sources=./src/
+          -Dsonar.sources=./app/
           -Dsonar.python.coverage.reportPaths=coverage.xml
 
