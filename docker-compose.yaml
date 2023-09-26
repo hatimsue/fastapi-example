@@ -1,0 +1,25 @@
+version: '3'
+services:
+
+  # fast-api-example
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: devco/fast-api-example
+    container_name: devco
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8080:8000"
+    environment:
+      SERVICE_NAME: app
+    working_dir: /app
+    volumes:
+      - .:/app
+    networks:
+      - app-network
+#Redes
+networks:
+  app-network:
+    driver: bridge
