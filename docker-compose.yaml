@@ -19,6 +19,19 @@ services:
       - .:/app
     networks:
       - app-network
+  # db
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      SERVICE_NAME: db
+      POSTGRES_PASSWORD: example
+    networks:
+      - app-network
+
 #Redes
 networks:
   app-network:
