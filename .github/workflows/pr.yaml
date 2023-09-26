@@ -41,7 +41,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}   
       with:
         args:
-          -Dsonar.projectKey=hatimsue_fastapi
+          -Dsonar.projectKey=hatimsue_fastapi-example
           -Dsonar.organization=hatimsue
           -Dsonar.sources=./app/
           -Dsonar.python.coverage.reportPaths=coverage.xml
